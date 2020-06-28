@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormularioComponent } from './formulario/formulario.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrMasker4Module } from 'brmasker4';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { ModalSuccessComponent } from './formulario/modal-success/modal-success.component';
@@ -18,7 +17,6 @@ const maskConfig: Partial<IConfig> = {
     ReactiveFormsModule,
     CommonModule,
     HomeRoutingModule,
-    BrMasker4Module,
     HttpClientModule,
     NgxMaskModule.forRoot(maskConfig),
   ]
