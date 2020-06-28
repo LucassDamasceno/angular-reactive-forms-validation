@@ -1,27 +1,16 @@
-# AngularReactiveFormsValidation
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<h1>Resumo</h1>
+<p>
+    Neste projeto exemplifico como pode ser estruturado um formulário utilizando uma poderosa framwork chamada Angular.<br>
+    Pode-se perceber com é simples fazer um formulário e suas devidas validações com angular.<br>
+</p>
+<p>
+    <h1> quais libs utilizei ?</h1>
+    layout : <strong>Bootstrap</strong><br>
+    mascara em inputs : <strong>ngx-mask</strong><br>
+</p>
+<p>link do projeto <a href="http://angular-reactive-forms-validation.vercel.app">http://angular-reactive-forms-validation.vercel.app</a>  </p>
+<p>
+    <a href="http://angular-reactive-forms-validation.vercel.app">
+        <img src="./screenshots/print.png" alt="">
+    </a>
+</p>

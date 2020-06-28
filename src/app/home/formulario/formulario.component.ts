@@ -25,7 +25,7 @@ export class FormularioComponent implements OnInit {
     this.formulario = this.formBuilder.group({
       nome: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
       sobrenome: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
-      nascimento: ['', [Validators.required]],
+      nascimento: ['', [Validators.required, Validators.minLength(8)]],
       celular: ['', [Validators.required, Validators.minLength(10)]],
       email: ['', [Validators.required, Validators.email]],
       cep: ['', [Validators.required, Validators.minLength(10)]],

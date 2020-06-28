@@ -47,3 +47,8 @@ form {
 .invalid-feedback {
     display: block !important;
 }
+
+input[type="date"]::content {
+    content: attr(placeholder) !important;
+
+  }

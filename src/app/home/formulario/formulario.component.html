@@ -27,7 +27,7 @@
                     <div class="form-row">
                         <div class="form-group col-sm-6">
                             <div class="input-group">
-                                <input formControlName="nascimento" #nascimento type="date" class="form-control" placeholder="NASCIMENTO" [ngClass]="aplicaCssErro('nascimento')">
+                                <input mask="d0/M0/0000" formControlName="nascimento" #nascimento type="text" class="form-control nascimento" placeholder="NASCIMENTO" [ngClass]="aplicaCssErro('nascimento')">
                                 <div *ngIf="this.formulario.get('nascimento').invalid && this.formulario.get('nascimento').touched" class="invalid-feedback">
                                     campo inválido
                                 </div>
