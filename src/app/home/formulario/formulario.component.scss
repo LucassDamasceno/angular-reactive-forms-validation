@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    margin-top: -50px;
+    font-size: 1.4em;
+}
+
+.card {
+    width: 1000px;
+    margin-top: 20px;
+}
+
+.topo {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+.text_image {
+    color: white;
+    text-align: center
+}
+
+.preview_img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.btn_salvar {
+    font-weight: 700;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    background-color: #000;
+    font-size: 1.6em;
+}
+
+.hover:hover {
+    color: rgb(86, 86, 233);
+    cursor: pointer;
+}
+
+.invalid-feedback {
+    display: block !important;
+}

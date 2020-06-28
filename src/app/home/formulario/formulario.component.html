@@ -1,0 +1,145 @@
+<div class="d-flex justify-content-center">
+    <div class="card">
+        <div class="card-body">
+            <form class="row" (ngSubmit)="validarFormulaio()" [formGroup]="formulario">
+                <div class="col-sm-12">
+                    <h1>Formulario Cadastro</h1>
+                </div>
+                <div class="col-12">
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="nome" type="text" class="form-control" placeholder="NOME" [ngClass]="aplicaCssErro('nome')">
+                                <div *ngIf="this.formulario.get('nome').invalid && this.formulario.get('nome').touched" class="invalid-feedback">
+                                    campo inválido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="sobrenome" type="text" class="form-control" placeholder="SOBRENOME" [ngClass]="aplicaCssErro('sobrenome')">
+                                <div *ngIf="this.formulario.get('sobrenome').invalid && this.formulario.get('sobrenome').touched" class="invalid-feedback">
+                                    campo inválido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="nascimento" #nascimento type="date" class="form-control" placeholder="NASCIMENTO" [ngClass]="aplicaCssErro('nascimento')">
+                                <div *ngIf="this.formulario.get('nascimento').invalid && this.formulario.get('nascimento').touched" class="invalid-feedback">
+                                    campo inválido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="celular" name="phone" #telefone  mask="(00) 0000-0000 || (00) 00000-0000"  class="form-control" placeholder="CELULAR" [ngClass]="aplicaCssErro('celular')">
+                                <div *ngIf="this.formulario.get('celular').invalid && this.formulario.get('celular').touched" class="invalid-feedback">
+                                    telefone inválido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input class="email" formControlName="email" type="text" class="form-control" placeholder="EMAIL" [ngClass]="aplicaCssErro('email')">
+                            <div *ngIf="this.formulario.get('email').invalid && this.formulario.get('email').touched" class="invalid-feedback">
+                                email inválido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input formControlName="cpf" mask="000.000.000-00" type="text" class="form-control" placeholder="CPF" [ngClass]="aplicaCssErro('cpf')">
+                            <div *ngIf="this.formulario.get('cpf').invalid && this.formulario.get('cpf').touched" class="invalid-feedback">
+                                cpf inválido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input id='cep' #inputCep (keyup)="buscarCep(inputCep.value)" mask='00.000-000' formControlName="cep" type="text" class="form-control" placeholder="CEP"  [ngClass]="aplicaCssErro('cep')">
+                            <div *ngIf="this.formulario.get('cep').invalid && this.formulario.get('cep').touched" class="invalid-feedback">
+                                cep inválido
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row ">
+                        <div class="form-group col-12">
+                            <div class="input-group">
+                                <input type="text" formControlName="endereco" class="form-control" [ngClass]="aplicaCssErro('endereco')" placeholder="ENDERECO">
+                                <div *ngIf="this.formulario.get('endereco').invalid && this.formulario.get('endereco').touched" class="invalid-feedback">
+                                    O campo ENDEREÇO deve conter no mínimo 3 digitos
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                            <div class="input-group">
+                                <input type="text" formControlName="numero" class="form-control" [ngClass]="aplicaCssErro('numero')" placeholder="NUMERO">
+                                <div *ngIf="this.formulario.get('numero').invalid && this.formulario.get('numero').touched" class="invalid-feedback">
+                                    O campo NÚMERO deve conter no mínimo 1 digitos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input formControlName="complemento" type="text" class="form-control" placeholder="COMPLEMENTO">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="bairro" type="text" class="form-control" placeholder="BAIRRO" [ngClass]="aplicaCssErro('bairro')">
+                                <div *ngIf="this.formulario.get('bairro').invalid && this.formulario.get('bairro').touched" class="invalid-feedback">
+                                    campo inválido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="cidade" type="text" class="form-control" placeholder="CIDADE" [ngClass]="aplicaCssErro('cidade')">
+                                <div *ngIf="this.formulario.get('cidade').invalid && this.formulario.get('cidade').touched" class="invalid-feedback">
+                                    campo inválido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <div class="input-group">
+                                <input formControlName="estado" type="text" class="form-control" placeholder="ESTADO" [ngClass]="aplicaCssErro('estado')">
+                                <div *ngIf="this.formulario.get('estado').invalid && this.formulario.get('estado').touched" class="invalid-feedback">
+                                    campo inválido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input formControlName="senha" type="password" class="form-control" placeholder="SENHA" [ngClass]="aplicaCssErro('senha')">
+                            <div *ngIf="this.formulario.get('senha').invalid && this.formulario.get('senha').touched" class="invalid-feedback">
+                                A senha deve conter no mínino 6 caracteres
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input formControlName="confirmSenha" type="password" class="form-control" placeholder="CONFIRMAR SENHA" [ngClass]="aplicaCssErro('confirmSenha')">
+                            <div *ngIf="this.formulario.get('confirmSenha').invalid && this.formulario.get('confirmSenha').touched" class="invalid-feedback">
+                                senha não confere
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center mt-4 mb-4">
+                    <button type="submit" data-toogle="modal" class="btn btn_salvar mb-2">ENVIAR</button><br>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<app-modal-success></app-modal-success>
